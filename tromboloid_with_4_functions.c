@@ -2,7 +2,7 @@
 #include<stdio.h>
     float volume(float h,float b,float d)
     {
-       return((h*d)+d/(3*b));
+       return ((h*b*d)+(d/b))/3;
      }
      float getdata()
      {
