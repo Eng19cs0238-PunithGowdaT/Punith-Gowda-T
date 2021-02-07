@@ -3,9 +3,10 @@
 int main()
 {
 float h,b,d,vol;
-printf(“Enter height,breadth,depth:”);
-scanf(“%f%f%f”,&h,&b,&d);
-vol=((h*d)+d)/(3*b);
-printf(“Volume=%f”,vol);
+printf("Enter height,breadth,depth:");
+scanf("%f%f%f",&h,&b,&d);
+vol=((h*b*d)+(d/b))/3;
+printf("Volume=%f",vol);
 return 0;
 }
+
