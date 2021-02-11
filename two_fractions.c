@@ -29,7 +29,6 @@ void display(Fraction r){
 int
 main ()
 {
-  int n1, d1, n2, d2;
   Fraction f1 = input (f1, 1);
   Fraction f2 = input (f2, 2);
   Fraction r = sum (f1, f2);
