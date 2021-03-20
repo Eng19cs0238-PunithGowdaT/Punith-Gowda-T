@@ -4,33 +4,45 @@ int
 getelement ()
 {
   int n;
-  printf ("Enter the number of integers you wish to add:");
   scanf ("%d", &n);
   return n;
 }
 
-int addsum(int n){
-     int a[n];
-    int s=0;
-     for (int i = 0; i < n; i++)
+void
+getN (int n, int a[n])
+{
+  for (int i = 0; i < n; i++)
     {
-      printf ("Enter the %d integer:", i + 1);
-      scanf ("%d", &a[i]);
+      a[i] = getelement ();
+    }
+}
+
+int
+addsum (int n, int a[n])
+{
+  int s=0;
+  for (int i = 0; i < n; i++)
+    {
       s = s + a[i];
     }
-    return s;
+  return s;
 }
 
-void display(int n,int s){
-    
-  printf ("sum of %d integers are %d", n, s);
-}
-
-void main()
+void
+display (int n, int s)
 {
-  int n, s;
-    n = getelement ();
-    s=addsum(n);
-    display(n,s);
- 
+
+  printf ("sum of %d integers is %d", n, s);
+}
+
+void
+main ()
+{
+  int n, sum;
+  n = getelement ();
+  int s[n];
+  getN (n, s);
+  sum = addsum (n, s);
+  display (n, sum);
+
 }
